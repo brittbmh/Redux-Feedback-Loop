@@ -10,14 +10,14 @@ class Understanding extends Component {
     }
 
     //update state to capture input
-    changeFeelings = (event) => {
+    changeUnderstanding = (event) => {
         this.setState({
             understanding: event.target.value
         });
     }
 
     //update Store with feelings rating
-    sendFeelings = (event) => {
+    sendUnderstanding = (event) => {
         event.preventDefault();
         const understanding = this.state.understanding;
         const action = { type: 'UPDATE_UNDER', payload: understanding };
@@ -28,10 +28,10 @@ class Understanding extends Component {
     render() {
         return (
             <div className="feedbackDiv">
-                <h4>How well are you understanding the content?</h4>
+                <h3>How well are you understanding the content?</h3>
                 <br />
-                <input type="text" onChange={this.changeFeelings} placeholder="enter 1-5" />
-                <button onClick={this.sendFeelings}>Next</button>
+                <input type="text" onChange={this.changeUnderstanding} placeholder="enter 1-5" />
+                <button onClick={this.sendUnderstanding}>Next</button>
             </div>
         )
     }

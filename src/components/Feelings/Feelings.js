@@ -28,7 +28,7 @@ class Feelings extends Component {
     render () {
         return (
             <div className="feedbackDiv">
-                <h4>How are you feeling today?</h4>
+                <h3>How are you feeling today?</h3>
                 <br />
                 <input type="text" onChange={this.changeFeelings} placeholder="enter 1-5"/>
                 <button onClick={this.sendFeelings}>Next</button>
