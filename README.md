@@ -1,11 +1,9 @@
 # Redux Feedback Loop
 
-> **PLEASE COMMENT YOUR CODE.** Do not clone this repository. Instead, download the zip, extract the contents, `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Please do this before you leave for the day.
-
 "And my last reminder of the day, which is my last reminder of every day, is...?" - Luke
 
 
- For this assignment, you will be creating a feedback form modeled after Prime's system. Feedback will be collected over 4 views, and when all steps are complete, your app will save the feedback in the database. In a separate part of the page, display the current feedback values and a submit button. 
+ This is a feedback form modeled after Prime's system. Feedback will be collected over 4 views, and when all steps are complete, the app will save the feedback in the database. In a separate part of the page, it will display the current feedback values and a submit button. 
 
 ### SETUP
 
@@ -24,10 +22,10 @@ npm run client
 
 ### ADD NEW FEEDBACK
 
-> NOTE: As a baseline requirement, you must use Redux to store your data across views.
+This app will use Redux to store the data across views.
 
-Create a multi-part form that allows users to leave feedback for today. 
-There will be 4 views for the form parts.
+It is a multi-part form that allows users to leave feedback for today. 
+There are 4 views for the form parts.
 The parts:
 - How are you feeling today?
 ![feeling](wireframes/feeling.png)

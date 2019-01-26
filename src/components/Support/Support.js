@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Review from './../Review/Review.js';
 
 class Support extends Component {
     constructor() {
@@ -27,12 +28,16 @@ class Support extends Component {
 
     render() {
         return (
-            <div className="feedbackDiv">
-                <h3>How well are you being supported?</h3>
+            <div>
+                <div className="feedbackDiv">
+                    <h3>How well are you being supported?</h3>
+                    <br />
+                    <input type="text" onChange={this.changeSupport} placeholder="enter 1-5" />
+                    <button onClick={this.sendSupport}>Next</button>
+                </div>
                 <br />
-                <input type="text" onChange={this.changeSupport} placeholder="enter 1-5" />
-                <button onClick={this.sendSupport}>Next</button>
-            </div>
+                <Review />
+            </div >
         )
     }
 }
