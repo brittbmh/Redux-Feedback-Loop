@@ -23,6 +23,8 @@ const feedbackReview = (state = defaultFeedback, action) => {
         return { ...state, Support: action.payload}
     } else if (action.type === 'UPDATE_COMMENT'){
         return {...state, Comments: action.payload}
+    } else if (action.type === 'CLEAR_FEEDBACK'){
+        return defaultFeedback;
     }
     return state;
 }

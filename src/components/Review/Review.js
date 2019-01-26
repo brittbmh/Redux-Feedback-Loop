@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './Review.css'; 
+import './Review.css';
 import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
 class Review extends Component {
-
+    //send Feedback to database and move to Success page
     postFeedback = (event) => {
-        
-        
         const feedback = this.props.reduxStore.feedbackReview;
         console.log(feedback);
         event.preventDefault();
-        axios.post('/api/feedback', feedback).then((response) => {
-            console.log(response);
-        })
+        axios.post('/api/feedback', feedback)
+            .then((response) => {
+                console.log(response);
+                const action = { type: 'CLEAR_FEEDBACK' };
+                this.props.dispatch(action);
+                this.props.history.push('/Success');
+            }).catch((error) => {
+                console.log(error);
+            })
     }
+
     // display current ratings entered at bottom of input pages
     render() {
         const feedback = this.props.reduxStore.feedbackReview;
@@ -35,4 +41,4 @@ const mapReduxStoreToProps = (reduxStore) => ({
     reduxStore
 })
 
-export default connect(mapReduxStoreToProps)(Review);
+export default withRouter(connect(mapReduxStoreToProps)(Review));

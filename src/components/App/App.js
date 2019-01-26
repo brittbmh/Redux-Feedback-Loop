@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import Header from './../Header/Header.js';
-import Review from './../Review/Review.js';
 import Feelings from './../Feelings/Feelings.js';
 import Understanding from './../Understanding/Understanding.js';
 import Support from './../Support/Support.js';
 import Comments from './../Comments/Comments.js';
 import FinalReview from './../FinalReview/FinalReview.js';
+import Success from './../Success/Success.js';
 import {HashRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
@@ -23,10 +23,11 @@ class App extends Component {
             <Route exact path='/Support' component={Support} />
             <Route exact path='/Comments' component={Comments} />
             <Route exact path='/FinalReview' component={FinalReview} />
+            <Route exact path='/Success' component={Success} />
           </div>
         </Router>
         <br />
-        <Review />
+        
       </div>
     );
   }
