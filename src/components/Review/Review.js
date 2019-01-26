@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './Review.css';
 import axios from 'axios';
 import {withRouter} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class Review extends Component {
     //send Feedback to database and move to Success page
@@ -23,6 +24,13 @@ class Review extends Component {
 
     // display current ratings entered at bottom of input pages
     render() {
+        let buttonSwitch;
+        if (this.props.location.pathname === '/FinalReview'){
+            buttonSwitch = <Button variant="contained" color="primary" margin="theme.spacing.unit" className="button" onClick={this.postFeedback}>Submit</Button>
+        } else {
+            buttonSwitch = <Button variant="contained" color="secondary" disabled margin="theme.spacing.unit" className="button" onClick={this.postFeedback}>Incomplete</Button>
+        };
+        
         const feedback = this.props.reduxStore.feedbackReview;
         return (
             <div className="review">
@@ -31,7 +39,7 @@ class Review extends Component {
                 <p>Understanding: {feedback.Understanding}</p>
                 <p>Support: {feedback.Support}</p>
                 <p>Comments: {feedback.Comments}</p>
-                <button onClick={this.postFeedback}>Submit</button>
+                {buttonSwitch}
             </div>
         )
     }
