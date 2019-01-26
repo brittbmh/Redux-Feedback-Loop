@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-import Header from './../Header/Header.js'
-import Review from './../Review/Review.js'
-import Feelings from './../Feelings/Feelings.js'
+import Header from './../Header/Header.js';
+import Review from './../Review/Review.js';
+import Feelings from './../Feelings/Feelings.js';
+import Understanding from './../Understanding/Understanding.js';
+import Support from './../Support/Support.js'
 import {HashRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
@@ -15,6 +17,8 @@ class App extends Component {
         <Router>
           <div>
             <Route exact path='/' component={Feelings}/>
+            <Route exact path='/Understanding' component={Understanding} />
+            <Route exact path='/Support' component={Support} />
           </div>
         </Router>
         <br />
