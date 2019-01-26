@@ -7,6 +7,7 @@ import Support from './../Support/Support.js';
 import Comments from './../Comments/Comments.js';
 import FinalReview from './../FinalReview/FinalReview.js';
 import Success from './../Success/Success.js';
+import Admin from './../Admin/Admin.js';
 import {HashRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path='/Comments' component={Comments} />
             <Route exact path='/FinalReview' component={FinalReview} />
             <Route exact path='/Success' component={Success} />
+            <Route exact path='/Admin' component={Admin} />
           </div>
         </Router>
         <br />
