@@ -8,7 +8,7 @@ import Support from './../Support/Support.js';
 import Comments from './../Comments/Comments.js';
 import FinalReview from './../FinalReview/FinalReview.js';
 import Success from './../Success/Success.js';
-import {HashRouter as Router, Route, Link } from 'react-router-dom';
+import {HashRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {

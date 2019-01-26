@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Review from './../Review/Review.js';
+import Button from '@material-ui/core/Button';
 
 class Feelings extends Component {
-    constructor(){
+    constructor() {
         super();
         this.state = {
             feelings: 0
@@ -26,17 +27,19 @@ class Feelings extends Component {
         this.props.history.push('/Understanding');
     }
 
-    render () {
+    render() {
         return (
             <div>
-            <div className="feedbackDiv">
-                <h3>How are you feeling today?</h3>
+                <div className="feedbackDiv">
+                    <h3>How are you feeling today?</h3>
+                    <br />
+                    <input type="text" onChange={this.changeFeelings} placeholder="enter 1-5" />
+                    <br />
+                    <br />
+                    <Button variant="contained" color="primary" margin="theme.spacing.unit" className="button" onClick={this.sendFeelings}>Next</Button>
+                </div>
                 <br />
-                <input type="text" onChange={this.changeFeelings} placeholder="enter 1-5"/>
-                <button onClick={this.sendFeelings}>Next</button>
-            </div>
-            <br />
-            <Review />
+                <Review />
             </div>
         )
     }

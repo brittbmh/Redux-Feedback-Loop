@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Review from './../Review/Review.js';
+import Button from '@material-ui/core/Button';
 
 class Comments extends Component {
     constructor() {
@@ -29,14 +30,16 @@ class Comments extends Component {
     render() {
         return (
             <div>
-            <div className="feedbackDiv">
-                <h3>Any additional comments?</h3>
+                <div className="feedbackDiv">
+                    <h3>Any additional comments?</h3>
+                    <br />
+                    <input type="text" onChange={this.changeComments} placeholder="enter comment" />
+                    <br />
+                    <br />
+                    <Button variant="contained" size="small" color="primary" margin="theme.spacing.unit" className="button" onClick={this.sendComments}>Next</Button>
+                </div>
                 <br />
-                <input type="text" onChange={this.changeComments} placeholder="enter comment" />
-                <button onClick={this.sendComments}>Next</button>
-            </div>
-            <br />
-            <Review />
+                <Review />
             </div >
         )
     }

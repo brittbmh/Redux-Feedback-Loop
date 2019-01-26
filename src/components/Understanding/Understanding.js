@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Review from './../Review/Review.js';
+import Button from '@material-ui/core/Button';
 
 class Understanding extends Component {
     constructor() {
@@ -33,7 +34,9 @@ class Understanding extends Component {
                     <h3>How well are you understanding the content?</h3>
                     <br />
                     <input type="text" onChange={this.changeUnderstanding} placeholder="enter 1-5" />
-                    <button onClick={this.sendUnderstanding}>Next</button>
+                    <br />
+                    <br />
+                    <Button variant="contained" color="primary" margin="theme.spacing.unit" className="button"  onClick={this.sendUnderstanding}>Next</Button>
                 </div>
                 <br />
                 <Review />
