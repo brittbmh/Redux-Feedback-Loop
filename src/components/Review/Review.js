@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Review.css'; 
+import axios from 'axios';
 
 class Review extends Component {
+
+    postFeedback = (event) => {
+        
+        
+        const feedback = this.props.reduxStore.feedbackReview;
+        console.log(feedback);
+        event.preventDefault();
+        axios.post('/api/feedback', feedback).then((response) => {
+            console.log(response);
+        })
+    }
     // display current ratings entered at bottom of input pages
     render() {
         const feedback = this.props.reduxStore.feedbackReview;
@@ -13,7 +25,7 @@ class Review extends Component {
                 <p>Understanding: {feedback.Understanding}</p>
                 <p>Support: {feedback.Support}</p>
                 <p>Comments: {feedback.Comments}</p>
-                <button>Submit</button>
+                <button onClick={this.postFeedback}>Submit</button>
             </div>
         )
     }
