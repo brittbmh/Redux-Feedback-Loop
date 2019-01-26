@@ -12,7 +12,8 @@ class Review extends Component {
                 <p>Feelings: {feedback.Feelings} </p>
                 <p>Understanding: {feedback.Understanding}</p>
                 <p>Support: {feedback.Support}</p>
-                <p>Comment: {feedback.Comment}</p>
+                <p>Comments: {feedback.Comments}</p>
+                <button>Submit</button>
             </div>
         )
     }

@@ -21,7 +21,7 @@ const feedbackReview = (state = defaultFeedback, action) => {
         return {...state, Understanding: action.payload};
     } else if (action.type === 'UPDATE_SUPPORT'){
         return { ...state, Support: action.payload}
-    } else if (action.type === 'UPDATE_COMMENTS'){
+    } else if (action.type === 'UPDATE_COMMENT'){
         return {...state, Comments: action.payload}
     }
     return state;

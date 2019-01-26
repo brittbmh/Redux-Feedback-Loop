@@ -20,7 +20,7 @@ class Comments extends Component {
     sendComments = (event) => {
         event.preventDefault();
         const comments = this.state.comments;
-        const action = { type: 'UPDATE_FEELINGS', payload: comments };
+        const action = { type: 'UPDATE_COMMENT', payload: comments };
         this.props.dispatch(action);
         this.props.history.push('/FinalReview');
     }
