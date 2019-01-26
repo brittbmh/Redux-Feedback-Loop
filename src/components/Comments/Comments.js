@@ -32,7 +32,6 @@ class Comments extends Component {
             <div>
                 <div className="feedbackDiv">
                     <h3>Any additional comments?</h3>
-                    <br />
                     <input type="text" onChange={this.changeComments} placeholder="enter comment" />
                     <br />
                     <br />

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Review from './../Review/Review.js';
 import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
 
 class Understanding extends Component {
     constructor() {
@@ -32,8 +34,23 @@ class Understanding extends Component {
             <div>
                 <div className="feedbackDiv">
                     <h3>How well are you understanding the content?</h3>
-                    <br />
-                    <input type="text" onChange={this.changeUnderstanding} placeholder="enter 1-5" />
+                    <TextField
+                        id="outlined-select-rating"
+                        select
+                        label="1 to 5"
+                        className="textField"
+                        value={this.state.understanding}
+                        onChange={this.changeUnderstanding}
+                        helperText="Enter Rating"
+                        margin="normal"
+                        variant="outlined"
+                    >
+                        <MenuItem value="1">1</MenuItem>
+                        <MenuItem value="2">2</MenuItem>
+                        <MenuItem value="3">3</MenuItem>
+                        <MenuItem value="4">4</MenuItem>
+                        <MenuItem value="5">5</MenuItem>
+                    </TextField>
                     <br />
                     <br />
                     <Button variant="contained" color="primary" margin="theme.spacing.unit" className="button"  onClick={this.sendUnderstanding}>Next</Button>

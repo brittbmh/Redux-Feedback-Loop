@@ -7,7 +7,7 @@ class Success extends Component {
             <div>
                 <h1>SUCCESS!</h1>
                 <br />
-                <iframe src="https://giphy.com/embed/xNBcChLQt7s9a" width="240" height="240" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> <p><a href="https://giphy.com/gifs/win-xNBcChLQt7s9a">via GIPHY</a></p>
+                <iframe src="https://giphy.com/embed/xNBcChLQt7s9a" title="30Rock Success Gif" width="240" height="240" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> <p><a href="https://giphy.com/gifs/win-xNBcChLQt7s9a">via GIPHY</a></p>
             </div>
         )
     }
