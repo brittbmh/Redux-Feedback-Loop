@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+//page appears after submit
 class Success extends Component {
     render() {
         return (

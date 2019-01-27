@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Review from './../Review/Review.js';
 
+//final review page for submit
 class FinalReview extends Component {
     render() {
         return (

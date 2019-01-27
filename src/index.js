@@ -14,6 +14,7 @@ const defaultFeedback = {
     Comments: ''
 }
 
+//each page will send a different input to reduxStore; clicking submit will clear it
 const feedbackReview = (state = defaultFeedback, action) => {
     if (action.type === 'UPDATE_FEELINGS'){
         return {...state, Feelings: action.payload};

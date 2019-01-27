@@ -27,8 +27,7 @@ class App extends Component {
             <Route exact path='/Admin' component={Admin} />
           </div>
         </Router>
-        <br />
-        
+        <br /> 
       </div>
     );
   }

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
+//get feedback to display on admin page
 router.get('/', (req, res) => {
     console.log('In GET');
     const queryText = `SELECT * FROM "feedback" ORDER BY "id" DESC;`;
@@ -14,6 +15,7 @@ router.get('/', (req, res) => {
     
 })
 
+//delete feedback from admin page
 router.delete('/:id', (req, res) => {
     const queryText = `DELETE FROM "feedback" WHERE "id" = $1;`;
     pool.query(queryText, [req.params.id]).then((result) => {
@@ -24,6 +26,7 @@ router.delete('/:id', (req, res) => {
     })
 })
 
+//post new feedback to database upon submit
 router.post('/', (req, res) => {
     console.log('In POST');
     const queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")

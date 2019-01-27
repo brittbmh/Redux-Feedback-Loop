@@ -9,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import swal from 'sweetalert';
 
-
+//for material ui table
 const styles = theme => ({
     root: {
         width: '100%',
@@ -33,6 +33,7 @@ class Admin extends Component {
         this.getFeedback();
     }
 
+    //initial get of feedback from database for admin page
     getFeedback = () => {
         axios.get('/api/feedback').then((response) => {
             console.log(response);
@@ -44,6 +45,7 @@ class Admin extends Component {
         })
     }
 
+    //function to delete feedback with alert to confirm
     rowDelete = (event) => {
         console.log(event);
         swal({
@@ -59,16 +61,13 @@ class Admin extends Component {
                 }).catch((error) => {
                     console.log(error);
                 })
-                
             } else {
                 swal("feedback saved")
             }
         });
-        
     }
 
     render() {
-
         return (
             <div>
                 <h2>Admin</h2>
