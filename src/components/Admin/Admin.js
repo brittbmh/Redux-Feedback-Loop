@@ -7,6 +7,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import swal from 'sweetalert';
+
 
 const styles = theme => ({
     root: {
@@ -44,11 +46,25 @@ class Admin extends Component {
 
     rowDelete = (event) => {
         console.log(event);
-        axios.delete(`/api/feedback/${event}`).then((response) => {
-            this.getFeedback();
-        }).catch((error) => {
-            console.log(error);
-        })
+        swal({
+            title: 'Please confirm delete.',
+            text: "Press OK to delete feedback",
+            icon: "warning",
+            buttons: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                axios.delete(`/api/feedback/${event}`).then((response) => {
+                    swal("feedback deleted", { icon: "success" })
+                    this.getFeedback();
+                }).catch((error) => {
+                    console.log(error);
+                })
+                
+            } else {
+                swal("feedback saved")
+            }
+        });
+        
     }
 
     render() {
