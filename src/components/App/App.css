@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  
+}
+
+body {
+  background-color: gainsboro;
 }
 
 .App-header {
@@ -22,6 +27,7 @@
     margin-left: 100px;
     margin-right: 100px;
     padding: 15px 75px;
+    background-color: white;
 }
 
 table td {
