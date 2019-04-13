@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 
-
 class Feelings extends Component {
     constructor() {
         super();
