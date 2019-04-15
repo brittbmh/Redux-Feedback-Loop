@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  
 }
 
 body {
@@ -8,7 +7,7 @@ body {
 }
 
 .App-header {
-  background-color: #d62708;
+  background-color: #2220af;
   min-height: 65px;
   padding: 20px;
   color: white;

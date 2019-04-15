@@ -72,7 +72,6 @@ class Admin extends Component {
         return (
             <div>
                 <h2>Admin</h2>
-                <p>Click row to delete feedback</p>
                 <Paper className="root">
                     <Table className="table">
                         <TableHead>
