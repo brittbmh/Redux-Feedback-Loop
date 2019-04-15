@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import swal from 'sweetalert';
+import Button from '@material-ui/core/Button';
 
 //for material ui table
 const styles = theme => ({
@@ -81,16 +82,20 @@ class Admin extends Component {
                                 <TableCell align="center">Support</TableCell>
                                 <TableCell align="center">Comments</TableCell>
                                 <TableCell align="center">Date</TableCell>
+                                <TableCell align="center">Delete</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
                             {this.state.feedback.map(row => (
-                                <TableRow key={row.id} onClick={event => this.rowDelete(row.id)} data-id={row.id}>
+                                <TableRow key={row.id} data-id={row.id}>
                                     <TableCell align="center">{row.feeling}</TableCell>
                                     <TableCell align="center">{row.understanding}</TableCell>
                                     <TableCell align="center">{row.support}</TableCell>
                                     <TableCell align="center">{row.comments}</TableCell>
                                     <TableCell align="center">{row.date}</TableCell>
+                                    <TableCell align="center">
+                                        <Button variant="contained" color="primary" onClick={event => this.rowDelete(row.id)}>Delete</Button>
+                                    </TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>
