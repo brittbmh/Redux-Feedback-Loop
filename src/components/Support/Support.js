@@ -34,7 +34,6 @@ class Support extends Component {
             <div>
                 <div className="feedbackDiv">
                     <h3>How well are you being supported?</h3>
-                    {/* <input type="text" onChange={this.changeSupport} placeholder="enter 1-5" /> */}
                     <Rating send={this.changeSupport} />
                     <br />
                     <br />

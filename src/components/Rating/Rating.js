@@ -7,22 +7,12 @@ class Rating extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            rating: 0
         }
     }
-
-    // update state to capture input
-    // changeRating = (event) => {
-    //     this.setState({
-    //         rating: event.target.value
-    //     });
-    // }
 
     //update Store with feelings rating
     sendRating = (event) => {
         event.preventDefault();
-        console.log(event);
-        
         this.setState({
             rating: event.target.value
         });

@@ -33,7 +33,6 @@ class Feelings extends Component {
             <div>
                 <div className="feedbackDiv">
                     <h3>How are you feeling today?</h3>
-                    {/* <input type="text" onChange={this.changeFeelings} placeholder="enter 1-5" /> */}
                     <Rating feedback="Feelings" send={this.changeFeelings}/>
                     <br />
                     <br />
