@@ -17,7 +17,7 @@ class Feelings extends Component {
     //update state to capture input
     changeFeelings = (event) => {
         this.setState({
-            feelings: event.target.value
+            feelings: event
         });
     }
 

@@ -4,24 +4,29 @@ import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 
 class Rating extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             rating: 0
         }
     }
 
-    //update state to capture input
-    changeRating = (event) => {
-        this.setState({
-            rating: event.target.value
-        });
-    }
+    // update state to capture input
+    // changeRating = (event) => {
+    //     this.setState({
+    //         rating: event.target.value
+    //     });
+    // }
 
     //update Store with feelings rating
     sendRating = (event) => {
         event.preventDefault();
-        const rating = this.state.rating;
+        console.log(event);
+        
+        this.setState({
+            rating: event.target.value
+        });
+        const rating = event.target.value;
         this.props.send(rating);
     }
 
@@ -35,7 +40,7 @@ class Rating extends Component {
                     label="1 to 5"
                     className="textField"
                     value={this.state.rating}
-                    onChange={this.changeRating}
+                    onChange={this.sendRating}
                     helperText="Enter Rating"
                     margin="normal"
                     variant="outlined"
