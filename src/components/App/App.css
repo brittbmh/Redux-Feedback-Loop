@@ -1,10 +1,15 @@
 .App {
   text-align: center;
+  
+}
+
+body {
+  background-color: gainsboro;
 }
 
 .App-header {
-  background-color: #033076;
-  min-height: 70px;
+  background-color: #d62708;
+  min-height: 65px;
   padding: 20px;
   color: white;
 }
@@ -22,6 +27,7 @@
     margin-left: 100px;
     margin-right: 100px;
     padding: 15px 75px;
+    background-color: white;
 }
 
 table td {

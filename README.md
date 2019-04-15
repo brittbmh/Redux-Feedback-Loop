@@ -48,7 +48,7 @@ In addition to the multi-step form, the app displays the results of each step cl
 
 ### Survey complete, Submit button is active:
 
-![comments](wireframes/review.png)
+![review](wireframes/review.png)
 
 ## SUBMIT THE FEEDBACK
 
