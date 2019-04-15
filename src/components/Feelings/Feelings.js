@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import Review from './../Review/Review.js';
 import Button from '@material-ui/core/Button';
 import Rating from './../Rating/Rating.js';
-import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField';
 
 class Feelings extends Component {
     constructor() {
@@ -15,9 +13,9 @@ class Feelings extends Component {
     }
 
     //update state to capture input
-    changeFeelings = (event) => {
+    changeFeelings = (rating) => {
         this.setState({
-            feelings: event
+            feelings: rating
         });
     }
 

@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Review from './../Review/Review.js';
+import Rating from './../Rating/Rating.js';
 import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField';
+
 
 class Support extends Component {
     constructor() {
         super();
         this.state = {
-            understanding: 0
+            support: 0
         }
     }
 
     //update state to capture input
-    changeSupport = (event) => {
+    changeSupport = (rating) => {
         this.setState({
-            support: event.target.value
+            support: rating
         });
     }
 
@@ -35,23 +35,7 @@ class Support extends Component {
                 <div className="feedbackDiv">
                     <h3>How well are you being supported?</h3>
                     {/* <input type="text" onChange={this.changeSupport} placeholder="enter 1-5" /> */}
-                    <TextField
-                        id="outlined-select-rating"
-                        select
-                        label="1 to 5"
-                        className="textField"
-                        value={this.state.support}
-                        onChange={this.changeSupport}
-                        helperText="Enter Rating"
-                        margin="normal"
-                        variant="outlined"
-                    >
-                        <MenuItem value="1">1</MenuItem>
-                        <MenuItem value="2">2</MenuItem>
-                        <MenuItem value="3">3</MenuItem>
-                        <MenuItem value="4">4</MenuItem>
-                        <MenuItem value="5">5</MenuItem>
-                    </TextField>
+                    <Rating send={this.changeSupport} />
                     <br />
                     <br />
                     <Button variant="contained" size="small" color="primary" margin="theme.spacing.unit" className="button"  onClick={this.sendSupport}>Next</Button>
